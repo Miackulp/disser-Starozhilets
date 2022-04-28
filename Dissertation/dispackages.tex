@@ -12,3 +12,48 @@
 \usepackage[intoc]{nomencl}
 \makenomenclature
 \setlength{\nomitemsep}{-.8\parsep}
+
+%%% Пакеты для алгоритмов
+\usepackage{algorithm2e}
+\SetAlgorithmName{Алгоритм}{Алгоритм}{Список алгоритмов} 
+\usepackage[noend]{algorithmic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Языковые настройки
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ruseng}[2]{\iflanguage{russian}{#1}\relax\iflanguage{english}{#2}\relax}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Оформление алгоритмов в пакетах algorithm, algorithmic
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% переопределения (русификация) управляющих конструкций:
+\newcommand{\algKeyword}[1]{{\textbf{ #1}}}
+\renewcommand{\algorithmicrequire}{\rule{0pt}{2.5ex}\algKeyword{Вход:}}
+\renewcommand{\algorithmicensure}{\algKeyword{Выход:}}
+\renewcommand{\algorithmicend}{\algKeyword{конец}}
+\renewcommand{\algorithmicif}{\algKeyword{если}}
+\renewcommand{\algorithmicthen}{\algKeyword{то}}
+\renewcommand{\algorithmicelse}{\algKeyword{иначе}}
+\renewcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
+\renewcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+\renewcommand{\algorithmicfor}{\algKeyword{для}}
+\renewcommand{\algorithmicforall}{\algKeyword{для всех}}
+\renewcommand{\algorithmicdo}{}
+\renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+\renewcommand{\algorithmicwhile}{\algKeyword{пока}}
+\renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+\renewcommand{\algorithmicloop}{\algKeyword{цикл}}
+\renewcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
+\renewcommand{\algorithmicrepeat}{\algKeyword{повторять}}
+\renewcommand{\algorithmicuntil}{\algKeyword{пока}}
+%\renewcommand{\algorithmiccomment}[1]{{\footnotesize // #1}}
+\renewcommand{\algorithmiccomment}[1]{{\quad\sl // #1}}
+
+% Мои дополнительные команды для описания алгоритмов
+\def\BEGIN{\\[1ex]\hrule\vskip 1ex}
+\def\PARAMS{\renewcommand{\algorithmicrequire}{\algKeyword{Параметры:}}\REQUIRE}
+\def\END{\vskip 1ex\hrule\vskip 1ex}
+\def\RET{\algKeyword{вернуть}}
+\def\EXIT{\algKeyword{выход}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
