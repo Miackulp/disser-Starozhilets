@@ -137,7 +137,7 @@
       \item Синхронизованный поток \(Q(\rho) = \beta_2\rho^2 + \beta_1\rho + \beta_0,\ \rho_1\leq\rho\leq\rho_2\),
       \item Заторный поток \(Q(\rho) = c_*(\rho_*-\rho),\ \rho_1\leq\rho\leq\rho_*\);
     \end{enumerate}
-    
+
     Kerner, B. S. Introduction to modern traffic flow theory and control [Текст]. Т. 700 / B. S. Kerner. — Springer, 2009.
 \end{frame}
 
@@ -488,6 +488,66 @@
     \end{minipage}
     \hfill
     Временные потери на проезд по МКАД относительно пустой автомагистрали
+\end{frame}
+
+\subsection{Сравнение с моделью интеллектуального водителя}
+\begin{frame}[plain, noframenumbering]
+    \begin{center}
+        \Huge
+        Сравнение с моделью интеллектуального водителя (IDM)
+    \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Моделирование небольшого участка автомагистрали}
+    \centering
+    \begin{minipage}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{simple_road_meso.eps}  \\ а) Результаты моделирования мезоскопической моделью
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{simple_road_micro.eps}  \\ b) Результаты моделирования микроскопической моделью
+    \end{minipage}
+    \hfill
+    Средняя относительная процентная ошибка (mean absolute percentile error - MAPE) для предложенной модели составила 5.35\%, для микроскопической модели составила 5.6\%.
+    Ошибка предложенной модели относительно модели разумного водителя~- 1.7\%.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Моделирование небольшого участка автомагистрали}
+    \centering
+    \begin{minipage}[b]{.49\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{modelling_time_cars.eps}  \\ а) Время моделирования в зависимости от потока АТС на въезде
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{.49\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{modelling_time_length.eps}  \\ b) Время моделирования в зависимости от длины участка магистрали
+    \end{minipage}
+    \hfill
+    Время моделирования моделями в зависимости от параметров потока АТС на въезде и длины моделируемого участка магистрали.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Результаты моделирования МКАД}
+    \centering
+    \begin{minipage}[b]{.53\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{result.eps}  \\ а) Результаты моделирования мезоскопической моделью
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{.45\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{MCAR_full_woenters_12_two_types_60_24h_3hmax_fullFD_micro_idm.eps}  \\ b) Результаты моделирования микроскопической моделью
+    \end{minipage}
+    \hfill
+    Результаты моделирования всей автомагистрали двумя моделями. Средняя абсолютная процентная ошибка - 5.4\%.
+    Ошибка определения режима - 2.8\%.
 \end{frame}
 
 
